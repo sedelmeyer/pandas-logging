@@ -1,7 +1,7 @@
-Pandas logging approaches
-=========================
+Approaches to logging data operations performed with Pandas
+===========================================================
 
-An investigation into logging pandas data operations.
+An investigation into logging data operations performed using the `Pandas <https://pandas.pydata.org/>`_ data analysis Python library.
 
 .. image:: https://travis-ci.com/sedelmeyer/pandas-logging.svg?branch=master
     :target: https://travis-ci.com/sedelmeyer/pandas-logging
@@ -17,9 +17,42 @@ An investigation into logging pandas data operations.
 Summary
 -------
 
-.. todo::
+This project is an investigation into potential approaches for logging data operations conducted using the Python ``pandas`` library.
 
-    * Add a brief summary of this project.
+I often find the need to document and review data pipelines used to cleanse data or engineer features used in my analyses. However:
+
+    * Short of reviewing the actual code used to perform those data operations, actions performed uing ``pandas`` leaves no record;
+
+    * Because ``pandas`` does not natively implement any logging functionality, changes made to data operations are not always readily available for later review unless care was taken to manually document changes to those operations.
+
+A log-stream saved to file would provide an auditable and portable record of actions performed on the data under analysis. It would also have the potential to provide a human-readable record that could be reviewed by non-developer analysts seeking to replicate the analysis using some sort of GUI analytics software such as Excel or Tableau.
+
+Therefore, this project is an investigation into potential approaches to achieve this sort of logging functionality in a repeatable manner.
+
+.. note::
+
+    * This project is starting from a point of personal exploration, and the degree to which I codify my findings into something useful for others to use still has yet to be determined.
+
+    * Therefore, documentation related to this investigation will likely be sparse unless/until I happen upon meaningful findings or an approach of real use.
+
+Potential existing solutions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As a starting point, this project contains the source code for two separate Open Source Python libraries written by authors other than myself:
+
+1. ``pdlog``, written by `Wasim Lorgat <https://github.com/seeM>`_, and hosted by the `DataProphet <https://github.com/DataProphet>`_ GitHub organization: https://github.com/DataProphet/pdlog
+
+2. ``pandas-log``, written by `Eyal Trabelsi <https://github.com/eyaltrabelsi>`_ and located at: https://github.com/eyaltrabelsi/pandas-log
+
+My initial intent is to:
+
+a. Explore, in-depth, the methods employed by these two libraries,
+b. Learn from the efforts of these two library authors,
+c. Consider their methods relative to approaches I have attempted in previous projects of my own.
+
+.. note::
+
+    **All sections below are still just boilerplate. Thus, they do not reflect any specifics having to do with this project.**
 
 Analysis and findings
 ---------------------
