@@ -9,9 +9,12 @@ pytest = "*"
 pytest-cov = "*"
 flake8 = "*"
 sphinx = "*"
+black = "==19.10b0"
 
 [packages]
 pd_logging = {editable = true,path = "."}
+pdlog = {editable = true,path = "."}
+pandas = "*"
 
 [requires]
 python_version = "3.7"
