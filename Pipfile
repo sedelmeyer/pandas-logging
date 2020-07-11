@@ -12,6 +12,8 @@ sphinx = "*"
 
 [packages]
 pd_logging = {editable = true,path = "."}
+pdlog = {editable = true,path = "."}
+pandas = "*"
 
 [requires]
 python_version = "3.7"
