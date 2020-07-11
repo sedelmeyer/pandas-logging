@@ -14,7 +14,10 @@ black = "==19.10b0"
 [packages]
 pd_logging = {editable = true,path = "."}
 pdlog = {editable = true,path = "."}
+pandas_log = {editable = true,path = "."}
 pandas = "*"
+pandas-flavor = "*"
+humanize = "*"
 
 [requires]
 python_version = "3.7"

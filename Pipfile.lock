@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1078c6bfc8ba05e431520ebc036bf86f332a80962e317c630d583d6f5ba99ea0"
+            "sha256": "4297a0076e24cdec7ea9df807b526d96db2bde4d33e862d57be75a34b07f7406"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,14 @@
         ]
     },
     "default": {
+        "humanize": {
+            "hashes": [
+                "sha256:89062c6db8601693b7d223443d0d7529aa9577df43a1387ddd4b9c273abb4a51",
+                "sha256:8a68bd9bccb899fd9bfb1e6d96c1e84e4475551cc9a5b5bdbd69b9b1cfd19c80"
+            ],
+            "index": "pypi",
+            "version": "==2.5.0"
+        },
         "numpy": {
             "hashes": [
                 "sha256:13af0184177469192d80db9bd02619f6fa8b922f9f327e077d6f2a6acb1ce1c0",
@@ -69,6 +77,18 @@
             "index": "pypi",
             "version": "==1.0.5"
         },
+        "pandas-flavor": {
+            "hashes": [
+                "sha256:7871655816de22dc766e916697ccc67449e1863c090ef5fd40d4d0fbd056e489",
+                "sha256:ce4d3640a89435c27eb2369305455865f043464ee5ae450e5388f4fb30eae241"
+            ],
+            "index": "pypi",
+            "version": "==0.2.0"
+        },
+        "pandas-log": {
+            "editable": true,
+            "path": "."
+        },
         "pd-logging": {
             "editable": true,
             "path": "."
@@ -97,6 +117,13 @@
                 "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
             ],
             "version": "==1.15.0"
+        },
+        "xarray": {
+            "hashes": [
+                "sha256:64e3138d87b641e22fe7a003c94abc685896b247b63e434505c1e6b38c91a8fb",
+                "sha256:a65ab828c6e139b61b93f170f4c96982b764beb27e55bcd87ef4a34285f8a19d"
+            ],
+            "version": "==0.15.1"
         }
     },
     "develop": {
