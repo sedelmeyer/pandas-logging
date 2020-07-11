@@ -28,7 +28,9 @@ class LogAccessor:
         return logging.log_filter(self._data, "dropna", *args, **kwargs)
 
     def drop_duplicates(self, *args: Any, **kwargs: Any) -> pd.DataFrame:
-        return logging.log_filter(self._data, "drop_duplicates", *args, **kwargs)
+        return logging.log_filter(
+            self._data, "drop_duplicates", *args, **kwargs
+        )
 
     def query(self, *args: Any, **kwargs: Any) -> pd.DataFrame:
         return logging.log_filter(self._data, "query", *args, **kwargs)
@@ -46,10 +48,14 @@ class LogAccessor:
         return logging.log_filter(self._data, "drop", *args, **kwargs)
 
     def set_index(self, *args: Any, **kwargs: Any) -> pd.DataFrame:
-        return logging.log_change_index(self._data, "set_index", *args, **kwargs)
+        return logging.log_change_index(
+            self._data, "set_index", *args, **kwargs
+        )
 
     def reset_index(self, *args: Any, **kwargs: Any) -> pd.DataFrame:
-        return logging.log_change_index(self._data, "reset_index", *args, **kwargs)
+        return logging.log_change_index(
+            self._data, "reset_index", *args, **kwargs
+        )
 
     def rename(self, *args: Any, **kwargs: Any) -> pd.DataFrame:
         return logging.log_rename(self._data, "rename", *args, **kwargs)
