@@ -8,7 +8,6 @@ Welcome to Pandas logging approaches's documentation!
    :maxdepth: 2
 
    readme
-   modules
    changelog
 
 Indices and tables
