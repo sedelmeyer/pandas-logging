@@ -3,9 +3,11 @@ Pandas logging approaches
 
 An investigation into logging pandas data operations.
 
-.. image:: https://travis-ci.com/sedelmeyer/pd-logging.svg?branch=master
-    :target: https://travis-ci.com/sedelmeyer/pd-logging
+.. image:: https://travis-ci.com/sedelmeyer/pandas-logging.svg?branch=master
+    :target: https://travis-ci.com/sedelmeyer/pandas-logging
 
+.. image:: https://github.com/sedelmeyer/pandas-logging/workflows/build/badge.svg?branch=master
+    :target: https://github.com/sedelmeyer/pandas-logging/actions
 
 .. contents:: Contents
   :local:
@@ -24,14 +26,14 @@ Analysis and findings
 
 The analysis and findings associated with this project can be found here:
 
-https://sedelmeyer.github.io/pd-logging
+https://sedelmeyer.github.io/pandas-logging
 
 Source code documentation
 -------------------------
 
 Documentation for the python modules built specifically for this analysis (i.e. modules located in the ``./src/`` directory of this project) can be found here:
 
-https://sedelmeyer.github.io/pd-logging/modules.html
+https://sedelmeyer.github.io/pandas-logging/modules.html
 
 .. _replication:
 
