@@ -38,9 +38,15 @@ def _test_log_function(
 @pytest.mark.parametrize(
     ("before", "after", "expected_level", "expected_msg"),
     (
-        pytest.param([], [], logging.INFO, "fn: empty input dataframe", id="empty_df"),
         pytest.param(
-            [0, 1, 2], [], logging.CRITICAL, "fn: dropped all rows", id="all_rows"
+            [], [], logging.INFO, "fn: empty input dataframe", id="empty_df"
+        ),
+        pytest.param(
+            [0, 1, 2],
+            [],
+            logging.CRITICAL,
+            "fn: dropped all rows",
+            id="all_rows",
         ),
         pytest.param(
             {"x": [1, 2, 3], "y": [4, 5, 6], "z": [7, 8, 9]},
@@ -64,7 +70,11 @@ def _test_log_function(
             id="some_cols",
         ),
         pytest.param(
-            [0, 1, 2], [0, 1, 2], logging.INFO, "fn: dropped no rows", id="no_rows"
+            [0, 1, 2],
+            [0, 1, 2],
+            logging.INFO,
+            "fn: dropped no rows",
+            id="no_rows",
         ),
     ),
 )
@@ -122,7 +132,12 @@ def test_log_change_index(caplog, before, after, expected_level, expected_msg):
     before_df = pd.DataFrame(index=before)
     after_df = pd.DataFrame(index=after)
     _test_log_function(
-        log_change_index, caplog, before_df, after_df, expected_level, expected_msg
+        log_change_index,
+        caplog,
+        before_df,
+        after_df,
+        expected_level,
+        expected_msg,
     )
 
 
@@ -222,7 +237,7 @@ def test_log_reshape(caplog, before_df, after_df, expected_level, expected_msg):
 
 @pytest.mark.parametrize(
     ("before", "after", "expected_level", "expected_msg"),
-    (([0, 1, nan], [0, 1, 1], logging.INFO, "fn: filled 1 observation (33.0%)"),),
+    (([0, 1, nan], [0, 1, 1], logging.INFO, "fn: filled 1 observation (33%)"),),
 )
 def test_log_fillna(caplog, before, after, expected_level, expected_msg):
     before_df = pd.DataFrame(before)
