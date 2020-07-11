@@ -20,8 +20,8 @@ sys.path.insert(0, os.path.abspath("../src"))
 
 # -- Project information -----------------------------------------------------
 
-project = "Pandas logging approaches"
-year = "" "2020"
+project = "pandas-logging"
+year = "2020"
 author = "Michael Sedelmeyer"
 copyright = "{0}, {1}".format(year, author)
 
@@ -94,7 +94,8 @@ html_theme_options = {
     "github_user": "sedelmeyer",
     "github_repo": "pandas-logging",
     "fixed_sidebar": "false",
-    "description": "An investigation into logging pandas data operations.",
+    "description": "An investigation into logging data operations performed using "
+    "the Pandas data analysis Python library.",
     "badge_branch": "master",
     "github_banner": "true",
     "github_button": "true",
