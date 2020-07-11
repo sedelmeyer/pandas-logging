@@ -21,9 +21,9 @@ This project is an investigation into potential approaches for logging data oper
 
 I often find the need to document and review data pipelines used to cleanse data or engineer features used in my analyses. However:
 
-    * Short of reviewing the actual code used to perform those data operations, actions performed uing ``pandas`` leaves no record;
+  * Short of reviewing the actual code used to perform those data operations, actions performed uing ``pandas`` leaves no record;
 
-    * Because ``pandas`` does not natively implement any logging functionality, changes made to data operations are not always readily available for later review unless care was taken to manually document changes to those operations.
+  * Because ``pandas`` does not natively implement any logging functionality, changes made to data operations are not always readily available for later review unless care was taken to manually document changes to those operations.
 
 A log-stream saved to file would provide an auditable and portable record of actions performed on the data under analysis. It would also have the potential to provide a human-readable record that could be reviewed by non-developer analysts seeking to replicate the analysis using some sort of GUI analytics software such as Excel or Tableau.
 
