@@ -1,3 +1,17 @@
+"""
+
+.. note::
+
+   The ``pdlog`` package content, including (including these tests) are copied
+   directly from a forked version of the following GitHub repository:
+   https://github.com/DataProphet/pdlog
+
+   * The ``pdlog`` version copied here is ``pdlog==0.1.0.post0``
+   * I make not claims of authorship for these ``pdlog`` tests
+   * Instead, I have copied them to this project in order to more
+   deeply investigate the methods used this this package.
+"""
+
 from datetime import date
 from datetime import datetime
 from typing import Any
@@ -55,7 +69,9 @@ class _FakeSequence(Sequence[Any]):
     ("items", "expected"),
     (
         pytest.param([1, 2, 3], "[1, 2, 3]", id="show_all"),
-        pytest.param(["1", "2", "3"], "['1', '2', '3']", id="show_all_with_strings"),
+        pytest.param(
+            ["1", "2", "3"], "['1', '2', '3']", id="show_all_with_strings"
+        ),
         pytest.param([1, 2, 3, 4], "[1, ..., 4]", id="summarize"),
         pytest.param(
             ["1", "2", "3", "4"], "['1', ..., '4']", id="summarize_with_strings"
@@ -64,11 +80,17 @@ class _FakeSequence(Sequence[Any]):
             ["1", "2", "3", "4"], "['1', ..., '4']", id="summarize_with_strings"
         ),
         # Class name is removed from summary string
-        pytest.param(_FakeSequence([1, 2, 3]), "[1, 2, 3]", id="summarize_class"),
         pytest.param(
-            [datetime(2020, 1, 1)], "['2020-01-01 00:00:00']", id="summarize_datetimes"
+            _FakeSequence([1, 2, 3]), "[1, 2, 3]", id="summarize_class"
         ),
-        pytest.param([date(2020, 1, 1)], "['2020-01-01']", id="summarize_dates"),
+        pytest.param(
+            [datetime(2020, 1, 1)],
+            "['2020-01-01 00:00:00']",
+            id="summarize_datetimes",
+        ),
+        pytest.param(
+            [date(2020, 1, 1)], "['2020-01-01']", id="summarize_dates"
+        ),
     ),
 )
 def test_summarize(items, expected):
